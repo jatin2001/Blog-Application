@@ -1,0 +1,18 @@
+<%-include("./partial/header") -%>
+    <%if(isAdmin) {%>
+        <h1>Compose</h1>
+        <form action="/compose" method="post">
+            <br>
+            <h4>Title</h4>
+            <input type="text" class="form-control" name='title' autocomplete="off" required>
+            <br>
+            <h4>Post</h4>
+            <textarea class="form-control" rows="5" name='post' autocomplete="off" required></textarea>
+            <br>
+            <button type="submit" class='btn-primary'>Publish</button>
+        </form>
+    <% }else{ %>
+        <h1>Sorry You are not Admin</h1>
+    <%}%>
+
+<%-include('./partial/footer') -%>
