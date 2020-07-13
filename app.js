@@ -4,8 +4,8 @@ const _ = require('lodash');
 const mongoose = require('mongoose');
 const { kebabCase } = require('lodash');
 const app = express();
+mongoose.connect('mongodb+srv://admin-jatin:9873804639@cluster0.ktbyq.mongodb.net/blogDB', {useNewUrlParser: true, useUnifiedTopology: true,useFindAndModify: false});
 
-mongoose.connect('mongodb://localhost:27017/blogs', {useNewUrlParser: true, useUnifiedTopology: true,useFindAndModify:false});
 let isLogin =false;
 let userId = '';
 const postSchema = new mongoose.Schema({
