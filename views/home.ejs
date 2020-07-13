@@ -1,12 +1,16 @@
-<%-include("./partial/header")-%>
-    <h1>Home</h1>
-    <h4><%=content%></h4>
+<%if(isLogin) {%>
+    <%-include("./partial/Loginheader") -%>
+<%} else {%>
+    <%-include("./partial/header") -%>
+<%}%>
+    <h1>Blogs</h1>
+    <br>
     <%posts.forEach((item)=>{%>
         <br>
-        <h1><%=item.title%></h1>
+        <h2><%=item.title.toUpperCase()%></h2>
     
-        <p><%=item.post.substring(0,200)%>...
-            <a href='/posts/<%= item.title %>'>Read More</a>
+        <p><%=item.content.substring(0,200)%>...
+            <a href='/posts/<%=item.title %>'>Read More</a>
         </p>
 
         <%})%>

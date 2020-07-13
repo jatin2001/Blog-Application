@@ -1,4 +1,8 @@
-<%- include("./partial/header") -%>
+<%if(isLogin) {%>
+    <%-include("./partial/Loginheader") -%>
+<%} else {%>
+    <%-include("./partial/header") -%>
+<%}%>
     <h1>Contact</h1>
     <p>
         <%=contactContent %>

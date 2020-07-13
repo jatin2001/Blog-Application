@@ -1,5 +1,10 @@
-<%-include("./partial/header") -%>
-    <%if(isAdmin) {%>
+    <%if(isLogin) {%>
+        <%-include("./partial/Loginheader") -%>
+    <%} else {%>
+        <%-include("./partial/header") -%>
+    <%}%>
+    
+    <%if(isLogin) {%>
         <h1>Compose</h1>
         <form action="/compose" method="post">
             <br>
@@ -12,7 +17,7 @@
             <button type="submit" class='btn-primary'>Publish</button>
         </form>
     <% }else{ %>
-        <h1>Sorry You are not Admin</h1>
+        <h3>You are not login <a href="/userLogin">Click here</a> to Log In</h3>
     <%}%>
 
 <%-include('./partial/footer') -%>

@@ -1,5 +1,13 @@
-<%- include('./partial/header') -%>
-    <h1><%=Title.toUpperCase()%></h1>
-    <p><%=content%></p>    
+<%if(isLogin) {%>
+    <%-include("./partial/Loginheader") -%>
+<%} else {%>
+    <%-include("./partial/header") -%>
+<%}%>
+    <h1><%=post.title.toUpperCase()%></h1>
+    <p><%=post.content%></p>  
+    <br>
+    <h4>Written By</h4>
+    <h3><%=name%></h3>
+
 <%- include('./partial/footer') -%>
     
