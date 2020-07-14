@@ -154,13 +154,32 @@ app.post('/userlogin',(req,res)=>{
    User.find((err,users)=>{
        if(!err)
        {
-          users.forEach(person=>{
-              if(person.emailID===email||person.password==-password)
+        //   users.forEach(person=>{
+        //       if(person.emailID===email||person.password==-password)
+        //       {   isLogin=true;
+        //           userId=person._id;
+        //           res.redirect('/compose');
+        //           return;
+        //       }
+        //   })
+        
+        let i;
+        for(i=0;i<users.length;i++)
+        {  const person = users[i];
+
+            if(person.emailID===email||person.password==-password)
               {   isLogin=true;
                   userId=person._id;
                   res.redirect('/compose');
+                  break;
               }
-          })
+          
+        }
+        if(i==users.length)
+        {
+            res.send('<h2 style="color: red;">Email address and Password does not match <a href="/userlogin">Login Again</a></h2>')
+                     
+        }
        }
    })
 })
@@ -171,18 +190,37 @@ app.get('/signup',(req,res)=>{
 app.post('/signup',(req,res)=>{
 
     const {firstName,lastName,Email,password} = req.body;
-    const newUser = new User(
+    let finditem = false;
+    User.find((err,users)=>{
+        if(!err)
         {
-            firstName,
-            lastName,
-            emailID:Email,
-            password,
-        }
-    )
-    newUser.save();
-
-    res.redirect('/userlogin');
     
+         let i;
+         for(i=0;i<users.length;i++)
+         {  const person = users[i];
+            console.log(person.firstName);
+
+            if(person.emailID===Email)
+                   {   
+                       console.log('exist');
+                       res.send('<h2 style="color: red;">Email already in use <a href="/signup">Use another email</a></h2>')
+                       break;
+                   }
+         }
+         if(i==users.length)
+         {
+             console.log('you can create new user');
+             const newUser = new User({
+                firstName,
+                lastName,
+                emailID:Email,
+                password,
+             })
+             newUser.save();
+             res.redirect('/userlogin');
+         }
+        }
+    })    
 })
 
 app.get('/logout',(req,res)=>{
