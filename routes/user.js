@@ -100,7 +100,7 @@ router.route('/dashboard')
 //Login
 router.route('/login')
 .get((req,res)=>{
-   res.render('login',{isLogin:false});
+   res.render('Login',{isLogin:false});
 })
 .post((req,res,next)=>{
     passport.authenticate('local', {
