@@ -45,7 +45,7 @@ module.exports = function(passport)
     passport.use(new GoogleStrategy({
         clientID: process.env.CLIENT_ID,
         clientSecret: process.env.CLIENT_SECRET,
-        callbackURL: "http://localhost:4000/auth/google/dashboard",
+        callbackURL: "https://aqueous-gorge-92975.herokuapp.com/auth/google/dashboard",
         userProfileURL: 'https://www.googleapis.com/oauth2/v3/userinfo'
       },
       function(accessToken, refreshToken, profile, done) {
@@ -78,7 +78,7 @@ module.exports = function(passport)
 passport.use(new FacebookStrategy({
     clientID: process.env.FACEBOOK_APP_ID,
     clientSecret: process.env.FACEBOOK_APP_SECRET,
-    callbackURL: "http://localhost:4000/auth/facebook/dashboard",
+    callbackURL: "https://aqueous-gorge-92975.herokuapp.com/auth/facebook/dashboard",
     profileFields: ['id', 'displayName', 'emails', 'photos','profileUrl'],
   },
   function(accessToken, refreshToken, profile, done) {
