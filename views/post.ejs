@@ -1,14 +1,13 @@
-<%if(isLogin) {%>
-    <%-include("./partial/Loginheader") -%>
-<%} else {%>
+
     <%-include("./partial/header") -%>
-<%}%>
     <h1><%=post.title.toUpperCase()%></h1>
     <p><%=post.content%></p>  
     <br>
     <h4 style="font-weight: 800;">Written By</h4>
     <h4>Name: <%=name%></h3>
+    <%if( typeof email !='undefined'){%>
     <h4>Email: <%=email%></h4>
+    <%}%>
 
 <%- include('./partial/footer') -%>
     

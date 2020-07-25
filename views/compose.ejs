@@ -1,23 +1,17 @@
-    <%if(isLogin) {%>
-        <%-include("./partial/Loginheader") -%>
-    <%} else {%>
+
         <%-include("./partial/header") -%>
-    <%}%>
     
-    <%if(isLogin) {%>
         <h1>Compose</h1>
-        <form action="/compose" method="post">
+        <form action="/users/compose" method="post">
+            <%-include('./partial/message')%>
             <br>
             <h4>Title</h4>
-            <input type="text" class="form-control" name='title' autocomplete="off" required>
+            <input type="text" class="form-control" name='title' autocomplete="off" value=<%= typeof title != 'undefined' ? title : '' %> >
             <br>
             <h4>Post</h4>
-            <textarea class="form-control" rows="5" name='post' autocomplete="off" required></textarea>
+            <textarea class="form-control" rows="5" name='content' autocomplete="off" value=<%= typeof content != 'undefined' ? content : '' %> ></textarea>
             <br>
-            <button type="submit" class='btn-primary'>Publish</button>
+            <button type="submit" class='btn btn-large btn-primary'>Publish</button>
         </form>
-    <% }else{ %>
-        <h3>You are not login <a href="/userLogin">Click here</a> to Log In</h3>
-    <%}%>
-
+   
 <%-include('./partial/footer') -%>

@@ -1,35 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign up</title>
-    <link rel="stylesheet" href="/css/signup.css">
-</head>
-<body background="white">
-    <form action="/signup" method="post">
+<%-include("./partial/header") -%>
+  <link rel="stylesheet" href="/css/signup.css">
+  <link href="/css/socialbtn.css" rel="stylesheet">
+  <div style="display: flex;">
+    <form action="/users/register" method="post" ">
         <h2>Sign Up</h2>
+        <%-include('./partial/message')%>
               <p>
-                    <label for="firstName" class="floatLabel" aria-autocomplete="off">First Name</label>
-                     <input id="firstName" name="firstName" type="text" required>
+                    <label for="firstName" class="floatLabel" aria-autocomplete="off"> Name</label>
+                     <input 
+                        id="firstName"
+                        name="name" 
+                        type="text"
+                        value=<%= typeof name != 'undefined' ? name : '' %> 
+                      >
               </p>
-              <p>
-                <label for="lastName" class="floatLabel">Last Name</label>
-                <input id="lastName" name="lastName" type="text" required>
-              </p>
+              
               <p>
                   <label for="Email" class="floatLabel">Email</label>
-                  <input id="Email" name="Email" type="text"  required>
+                  <input 
+                        id="Email" 
+                        name="email" 
+                        type="text"  
+                        value=<%= typeof email != 'undefined' ? email : '' %>
+                        >
               </p>
               <p>
                   <label for="password" class="floatLabel">Password</label>
-                  <input id="password" name="password" type="password"  required>
+                  <input id="password" 
+                         name="password" 
+                         type="password" 
+                         value=<%= typeof password != 'undefined' ? password : '' %> 
+                         >
+              </p>
+              <p>
+                <label for="password" class="floatLabel">Confirm Password</label>
+                <input id="password2" 
+                name="password2" 
+                type="password" 
+                value=<%= typeof password2 != 'undefined' ? password2 : '' %> 
+                >    
               </p>
               <p>
                   <input type="submit" id="submit">
-              </p>
-
-              
+              </p>  
+              <p class="login mt-3" style="margin-bottom: -15px;">Have An Account? <a href="/users/login">Login</a></p>    
         </form>
-</body>
-</html>
+
+          <div class="socialbuttons">
+                  <a href="/auth/facebook" class="fb btns">
+                  <i class="fa fa-facebook fa-fw"></i> Sign up with Facebook
+                  </a>
+                  <hr>
+                  <a href="/auth/google" class="google btns" style="padding-right: 33px;">
+                  <i class="fa fa-google fa-fw"></i> Sign up with Google+  
+                  </a>
+          </div>
+      
+    </div>
+        <%-include("./partial/footer") -%>

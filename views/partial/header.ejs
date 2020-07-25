@@ -5,20 +5,48 @@
   <meta charset="utf-8">
   <title>Daily Journal</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="shortcut icon" href="/images/book.PNG" type="image/x-icon">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css">
-  <nav class="navbar navbar-default">
+
+  <nav class="navbar navbar-expand-lg" style="background-color:#1abc9c ;">
     <div class="container">
       <div class="navbar-header">
-        <p class="navbar-brand">DAILY JOURNAL</p>
+        <p class="navbar-brand" style="color: white;font-weight: 600;"><i class="fa fa-book fa-6x" style="font-size: 40px;" aria-hidden="true"></i> DAILY JOURNAL</p>
       </div>
-        <ul class="nav navbar-nav navbar-right">
-          <!-- 6 -->
-            <li id="home"><a href="/">HOME</a></li>
-            <li id="about"><a href="/about">ABOUT US</a></li>
-            <li id="contact"><a href="/contact">CONTACT US</a></li>
-            <li id="compose"><a href="/compose">COMPOSE</a></li>
-            <li id="compose"><a href="/userlogin">LOGIN</a></li>
+        <ul class="nav navbar-nav navbar-right my-auto">
+            <li class="nav-item "id="home" >
+              <a class="nav-link" href="/" style="color:white; margin-left:13px;font-size: 13px;">HOME</a>
+            </li>
+            <li class="nav-item" id="about">
+              <a class="nav-link" href="/about" style="color:white; margin-left:13px;font-size: 13px;">ABOUT</a>
+            </li>
+            <li class="nav-item" id="contact">
+              <a class="nav-link" href="/contact" style="color:white; margin-left:13px;font-size: 13px;">CONTACT US</a>
+            </li>
+            <li class="nav-item" id="compose">
+              <a class="nav-link" href="/users/compose" style="color:white; margin-left:13px;font-size: 13px;">COMPOSE</a>
+            </li>
+            <% if((typeof isLogin !='undefined')&& isLogin !=false) {%>
+               <li id="compose " class="dropdown">
+                <img class="mb-4" src="/images/admin.jpg" alt="" width="60" height="60" style="border-radius: 50% ; margin-left:13px;margin-right:-25px">
+                  <div class="dropdown-content">
+                     <%if(typeof name!='undefined') {%>
+                      <p>Hi,<%=name%></p> <hr>
+                      <%}%>
+                    <a href="/users/dashboard" style="text-decoration: none;;">DASHBOARD</a>
+                      <hr>
+                      <a href="/users/logout" style="text-decoration: none;">LOGOUT</a>
+                  </div>
+               </li> 
+               
+            <%}else{%>
+              <li class="nav-item" id="login">
+                <a class="nav-link" href="/users/login" style="color:white; margin-left:13px;font-size: 13px;margin-right:-25px">LOGIN</a>
+              </li>
+            <%}%>
         </ul>
     </div>
   </nav>
