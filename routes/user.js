@@ -141,7 +141,7 @@ router.route('/register')
             res.render('signup',{msg,name,email,password,password2});
         }
         else{
-            User.findOne({email},(err,user)=>{
+            User.findOne({email:email},(err,user)=>{
                 if(err) console.log(err);
                 else{
                     if(user)

@@ -56,3 +56,31 @@
   .dropdown:hover .dropdown-content {
     display: block;
   }
+  .header-body{
+    background-color:#1abc9c ;
+  }
+  @media only screen and (max-width: 1000px) {
+     .header-brand{
+      font-size: 3em;
+      text-align: center;
+    }
+    .header-ul{
+      display: none;
+   }
+  } 
+  
+  @media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3) { .header-body{
+  height:300px;
+  background-color:black
+}
+.header-brand{
+  font-size: 4em;
+  margin-left:auto;
+}
+.header-ul{
+  display: none;
+}
+}
