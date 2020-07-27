@@ -28,27 +28,27 @@
          <ul class="nav navbar-nav navbar-right header-ul dropdown-contentheader" id ="uLheader">
           ``<div class="responsive-login">
             <img src="/images/admin.jpg" alt="" width="200" height="200" style="border-radius: 50%;">
-              <li class="nav-item "id="Login" >
+              <li class="nav-item dropdown-contentelement"id="Login" >
                 <a class="nav-link header-content" href="/">LOGIN/SIGN UP</a>
               </li>
               <li>
                 <hr style="border: 5px solid white;">
               </li>
           </div>
-            <li class="nav-item "id="home" >
+            <li class="nav-item dropdown-contentelement"id="home" >
               <a class="nav-link header-content" href="/">HOME</a>
             </li>
-            <li class="nav-item" id="about">
+            <li class="nav-item dropdown-contentelement" id="about">
               <a class="nav-link header-content " href="/about" >ABOUT</a>
             </li>
-            <li class="nav-item" id="contact">
+            <li class="nav-item dropdown-contentelement" id="contact">
               <a class="nav-link header-content" href="/contact" >CONTACT US</a>
             </li>
-            <li class="nav-item " id="compose">
+            <li class="nav-item dropdown-contentelement " id="compose">
               <a class="nav-link header-content" href="/users/compose" >COMPOSE</a>
           </li>
             <% if((typeof isLogin !='undefined')&& isLogin !=false) {%>
-               <li id="compose " class="dropdown">
+               <li id="compose " class="dropdown avaterhead">
                 <img class="mb-4" src="/images/admin.jpg" alt="" width="60" height="60" style="border-radius: 50% ; margin-left:13px;margin-right:-25px">
                   <div class="dropdown-content">
                      <%if(typeof name!='undefined') {%>
@@ -61,7 +61,7 @@
                </li> 
                
             <%}else{%>
-              <li class="nav-item" id="login">
+              <li class="nav-item dropdown-contentelement loginhead" id="login">
                 <a class="nav-link header-content" href="/users/login" >LOGIN</a>
               </li>
             <%}%>
