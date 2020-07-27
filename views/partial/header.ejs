@@ -26,11 +26,16 @@
       </div>
         <div class="dropdownheader">
          <ul class="nav navbar-nav navbar-right header-ul dropdown-contentheader" id ="uLheader">
-          ``<div class="responsive-login">
+          <div class="responsive-login">
             <img src="/images/admin.jpg" alt="" width="200" height="200" style="border-radius: 50%;">
-              <li class="nav-item dropdown-contentelement"id="Login" >
-                <a class="nav-link header-content" href="/">LOGIN/SIGN UP</a>
+            <% if((typeof isLogin !='undefined')&& isLogin !=false) {%>  
+                <li class="nav-item dropdown-contentelement" style="font-size: 40px;color:black">Hi,<%=name%>
+                </li>
+            <%}else{%>
+              <li class="nav-item dropdown-contentelement" id="Login" >
+                <a class="nav-link header-content" href="/users/login">LOGIN/SIGN UP</a>
               </li>
+            <%}%>
               <li>
                 <hr style="border: 5px solid white;">
               </li>
@@ -38,6 +43,11 @@
             <li class="nav-item dropdown-contentelement"id="home" >
               <a class="nav-link header-content" href="/">HOME</a>
             </li>
+            <% if((typeof isLogin !='undefined')&& isLogin !=false) {%>
+              <li class="nav-item dropdown-contentelement dashboardresp"id="home" >
+                <a class="nav-link header-content" href="/users/dashboard">DASHBOARD</a>
+              </li>
+            <%}%>
             <li class="nav-item dropdown-contentelement" id="about">
               <a class="nav-link header-content " href="/about" >ABOUT</a>
             </li>
@@ -47,10 +57,14 @@
             <li class="nav-item dropdown-contentelement " id="compose">
               <a class="nav-link header-content" href="/users/compose" >COMPOSE</a>
           </li>
+          <% if((typeof isLogin !='undefined')&& isLogin !=false) {%>
+            <li class="nav-item dropdown-contentelement dashboardresp"id="home" >
+              <a class="nav-link header-content" href="/users/logout">LOGOUT</a>
+            </li>
+          <%}%>
             <% if((typeof isLogin !='undefined')&& isLogin !=false) {%>
-              <li class="dropdown-contentelement">
-                <ul id="compose " class="dropdown">
-                  <img class="mb-4" src="/images/admin.jpg" alt="" width="60" height="60" style="border-radius: 50% ; margin-left:13px;margin-right:-25px">
+                <li id="compose " class="dropdown">
+                  <img class="mb-4 loginhead" src="/images/admin.jpg" alt="" width="60" height="60" style="border-radius: 50% ; margin-left:13px;margin-right:-25px">
                     <div class="dropdown-content">
                        <%if(typeof name!='undefined') {%>
                         <p>Hi,<%=name%></p> <hr>
@@ -59,8 +73,7 @@
                         <hr>
                         <a href="/users/logout" style="text-decoration: none;">LOGOUT</a>
                     </div>
-                  </ul> 
-              </li>
+                  </li> 
                
             <%}else{%>
               <li class="nav-item dropdown-contentelement loginhead" id="login">
