@@ -48,17 +48,19 @@
               <a class="nav-link header-content" href="/users/compose" >COMPOSE</a>
           </li>
             <% if((typeof isLogin !='undefined')&& isLogin !=false) {%>
-               <li id="compose " class="dropdown avaterhead">
-                <img class="mb-4" src="/images/admin.jpg" alt="" width="60" height="60" style="border-radius: 50% ; margin-left:13px;margin-right:-25px">
-                  <div class="dropdown-content">
-                     <%if(typeof name!='undefined') {%>
-                      <p>Hi,<%=name%></p> <hr>
-                      <%}%>
-                    <a href="/users/dashboard" style="text-decoration: none;;">DASHBOARD</a>
-                      <hr>
-                      <a href="/users/logout" style="text-decoration: none;">LOGOUT</a>
-                  </div>
-               </li> 
+              <li class="dropdown-contentelement">
+                <ul id="compose " class="dropdown">
+                  <img class="mb-4" src="/images/admin.jpg" alt="" width="60" height="60" style="border-radius: 50% ; margin-left:13px;margin-right:-25px">
+                    <div class="dropdown-content">
+                       <%if(typeof name!='undefined') {%>
+                        <p>Hi,<%=name%></p> <hr>
+                        <%}%>
+                      <a href="/users/dashboard" style="text-decoration: none;;">DASHBOARD</a>
+                        <hr>
+                        <a href="/users/logout" style="text-decoration: none;">LOGOUT</a>
+                    </div>
+                  </ul> 
+              </li>
                
             <%}else{%>
               <li class="nav-item dropdown-contentelement loginhead" id="login">
