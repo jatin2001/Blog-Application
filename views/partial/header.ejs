@@ -19,22 +19,24 @@
   <body>
   <nav class="navbar navbar-expand-lg header-body">
     <div class="container">
+      <button class="dropbtnheader" onclick="myFunction()">D</button>
       <div class="navbar-header">
         <p class="navbar-brand header-brand" style="color: white;font-weight: 600;"><i class="fa fa-book fa-6x" style="font-size: 40px;" aria-hidden="true"></i> DAILY JOURNAL</p>
       </div>
-        <ul class="nav navbar-nav navbar-right my-auto header-ul">
+        <div class="dropdownheader">
+         <ul class="nav navbar-nav navbar-right header-ul dropdown-contentheader" id ="uLheader">
             <li class="nav-item "id="home" >
-              <a class="nav-link" href="/" style="color:white; margin-left:13px;font-size: 13px;">HOME</a>
+              <a class="nav-link header-content" href="/">HOME</a>
             </li>
             <li class="nav-item" id="about">
-              <a class="nav-link" href="/about" style="color:white; margin-left:13px;font-size: 13px;">ABOUT</a>
+              <a class="nav-link header-content " href="/about" >ABOUT</a>
             </li>
             <li class="nav-item" id="contact">
-              <a class="nav-link" href="/contact" style="color:white; margin-left:13px;font-size: 13px;">CONTACT US</a>
+              <a class="nav-link header-content" href="/contact" >CONTACT US</a>
             </li>
-            <li class="nav-item" id="compose">
-              <a class="nav-link" href="/users/compose" style="color:white; margin-left:13px;font-size: 13px;">COMPOSE</a>
-            </li>
+            <li class="nav-item " id="compose">
+              <a class="nav-link header-content" href="/users/compose" >COMPOSE</a>
+          </li>
             <% if((typeof isLogin !='undefined')&& isLogin !=false) {%>
                <li id="compose " class="dropdown">
                 <img class="mb-4" src="/images/admin.jpg" alt="" width="60" height="60" style="border-radius: 50% ; margin-left:13px;margin-right:-25px">
@@ -50,10 +52,11 @@
                
             <%}else{%>
               <li class="nav-item" id="login">
-                <a class="nav-link" href="/users/login" style="color:white; margin-left:13px;font-size: 13px;margin-right:-25px">LOGIN</a>
+                <a class="nav-link header-content" href="/users/login" >LOGIN</a>
               </li>
             <%}%>
         </ul>
+      </div>
     </div>
   </nav>
     <div class="container">

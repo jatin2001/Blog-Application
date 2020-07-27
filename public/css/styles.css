@@ -59,4 +59,82 @@
   .header-body{
     background-color:#1abc9c ;
   }
+  .header-content{
+    color:white; margin-left:13px;font-size: 13px;
+  }
+  .dropbtnheader{
+    display: none;
+  }
+  
+
+  @media only screen and (max-width:992px){
+  .header-ul{
+    display:none;
+  }
+  /* Style The Dropdown Button */
+  .dropbtnheader {
+    display: inline;
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdownheader {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-contentheader {
+    width:  75vw;
+    height: 100vh;
+    display: none;
+    position: absolute;
+    background-color:#1abc9c;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    left:0;
+    top:0;
+    position:fixed;
+    z-index: 1;
+  }
+  .show{
+    display: block;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-contentheader li {
+    color: white;
+    padding: 12px 16px;
+    font-size: 25px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-contentheader a:hover {color:black;}
+  
+  /* Show the dropdown menu on hover */
+  
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdownheader:hover .dropbtnheader {
+    background-color: #3e8e41;
+  }
+ 
+  }
+
+  @media only screen and (max-width:500px){
+    body{
+      background-color: black;
+    }
+    
+    }
+
+
+
+  
  
