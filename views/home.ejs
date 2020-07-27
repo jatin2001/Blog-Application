@@ -1,14 +1,14 @@
 <%-include("./partial/header") -%>
 <br>
-<h1>BLOGS</h1>
+<h1 class="home-title">ARTICLE</h1>
 <br>
 <%posts.forEach((item)=>{%>
     <form action="/posts/<%=item.title %>" method="post" id='<%=item._id%>'>
         <input type="hidden" name='blogId' value="<%=item._id%>" >   
     <br>
-        <h3 style="font-weight: 400;"><%=item.title.toUpperCase()%></h3>
+        <h3  class="post-title" style="font-weight: 400;"><%=item.title.toUpperCase()%></h3>
         <%let showText = item.content.length>100?'Read More':'Read Post'%>
-        <p><%=item.content.substring(0,100)%>...
+        <p class="post-content"><%=item.content.substring(0,100)%>...
             <a href='#' onclick="document.getElementById('<%=item._id%>').submit()">
                 <%=showText%>
             </a>

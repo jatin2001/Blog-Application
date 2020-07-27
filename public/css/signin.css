@@ -37,3 +37,166 @@
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+.userprofilepic{
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+.socialLogin{
+  display: flex;justify-content:center;margin-top:-20px;
+}
+.googleLogin{
+  margin-left:25px;
+}
+.facebookLogin{
+  margin-right:25px;
+}
+
+@media only screen and (min-device-width : 280px) and (max-device-width : 480px) 
+{
+  .loginblock{
+      width: 95%;
+      margin-top:30px;
+  }
+  .form-signin
+  {
+    width: 100%;
+    max-width: 100%;
+  }
+  .login-text{
+    font-size: 5em;
+    font-weight: 100;
+    color:#1abc9c;
+  }
+  .form-signin input[type="email"] {
+    margin-top:50px;
+    width: 100%;
+    height: 125px;
+    font-size: 3em;
+    font-weight: 100;
+    padding-left:10%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+  .form-signin input[type="password"] {
+    width:100%;
+    height: 125px;
+    font-size: 3em;
+    font-weight: 100;
+    padding-left: 10%;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+  }
+  .userprofilepic{
+    height: 350px;
+    width: 350px;
+  }
+  .btnlogin{
+    width:100%;
+    height: 100px;
+    font-size: 3em;
+    margin-top:75px;
+    border-radius: 20px;
+  }
+  .signupdetail{
+    font-size: 2em;
+  }
+  .socialLogin{
+    display: flex;
+    flex-direction: column;
+  }
+  .facebookLogin{
+    width:97%;
+    margin-left:1%;
+    height: 100px;
+    margin-top:25px;
+    font-size: 2.5em;
+    margin-right:-50px;
+    border-radius: 20px;
+    padding-top: 25px;
+  }
+  .googleLogin{
+    width:97%;
+    margin-left: 1%;
+    height: 100px;
+    margin-top:25px;
+    font-size: 2.5em;
+    margin-top:25px;
+    border-radius: 20px;
+    padding-top: 25px;
+  }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 812px)
+{
+  .loginblock{
+      width: 90%;
+      margin-top:15px;
+  }
+  .form-signin
+  {
+    width: 100%;
+    max-width: 100%;
+  }
+  .login-text{
+    font-size: 2.5em;
+    font-weight: 100;
+    color:#1abc9c;
+  }
+  .form-signin input[type="email"] {
+    margin-top:30px;
+    width: 100%;
+    height: 75px;
+    font-size: 1.7em;
+    font-weight: 100;
+    padding-left:10%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .form-signin input[type="password"] {
+    width:100%;
+    height: 75px;
+    font-size: 1.7em;
+    font-weight: 100;
+    padding-left: 10%;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .userprofilepic{
+    height: 250px;
+    width: 250px;
+  }
+  .btnlogin{
+    width:100%;
+    height: 70px;
+    font-size: 1.7em;
+    margin-top:75px;
+    border-radius: 20px;
+  }
+  .signupdetail{
+    font-size: 1.7em;
+  }
+  .socialLogin{
+    display: flex;
+    flex-direction: column;
+  }
+  .facebookLogin{
+    width:96%;
+    margin-left:1%;
+    height: 70px;
+    margin-top:20px;
+    font-size: 1.7em;
+    border-radius: 20px;
+    padding-top: 20px;
+  }
+  .googleLogin{
+    width:96%;
+    margin-left: 1%;
+    height: 70px;
+    margin-top:20px;
+    font-size: 1.7em;
+    margin-top:25px;
+    border-radius: 20px;
+    padding-top: 20px;
+  }
+}

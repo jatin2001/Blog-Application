@@ -20,7 +20,7 @@
   <nav class="navbar navbar-expand-lg header-body">
     
     <div class="header-width">
-      <button class="dropbtnheader" onclick="myFunction()">D</button>
+      <i class="fa fa-bars dropbtnheader" onclick="myFunction()" aria-hidden="true"></i>
       <div class="navbar-header">
         <p class="navbar-brand header-brand" style="color: white;font-weight: 600;"><i class="fa fa-book"  style="font-size: 1.5em;" aria-hidden="true"></i> DAILY JOURNAL</p>
       </div>
@@ -29,7 +29,7 @@
           <div class="responsive-login">
             <img src="/images/admin.jpg" alt="" class="ulimg" style="border-radius: 50%;">
             <% if((typeof isLogin !='undefined')&& isLogin !=false) {%>  
-                <li class="nav-item dropdown-contentelement userName" style="color:black">Hi,<%=name%>
+                <li class="nav-item dropdown-contentelement userName">Hi,<%=name%>
                 </li>
             <%}else{%>
               <li class="nav-item dropdown-contentelement" id="Login" >
@@ -37,7 +37,7 @@
               </li>
             <%}%>
               <li>
-                <hr class="userhr"style="border: 5px solid white;">
+                <hr class="userhr">
               </li>
           </div>
             <li class="nav-item dropdown-contentelement"id="home" >
@@ -84,4 +84,4 @@
       </div>
     </div>
   </nav>
-    <div class="container">
+    <div class="body-width">

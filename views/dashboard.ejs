@@ -4,22 +4,22 @@
     <%-include('./partial/message') %>
     <% if(typeof posts !=='undefined'){ %>
 
-        <h1>Your Blogs</h1>
+        <h1 class="home-title">Your Blogs</h1>
     
     <br>
 <%posts.forEach((item,index)=>{%>
     <form action="/posts/<%=item.title %>" method="post" id='<%=item._id%>'>
         <input type="hidden" name='blogId' value="<%=item._id%>" >   
     <br>
-        <h2 style="font-weight: 400;"><%=index+1%>) <%=item.title.toUpperCase()%></h2>
+        <h2  class="post-title" style="font-weight: 400;"><%=index+1%>) <%=item.title.toUpperCase()%></h2>
         <%let showText = item.content.length>100?'Read More':'Read Post'%>
-        <p><%=item.content.substring(0,100)%>...
+        <p class="post-content"><%=item.content.substring(0,100)%>...
             <a href='#' onclick="document.getElementById('<%=item._id%>').submit()">
                 <%=showText%>
             </a>
         </form>
         <form action="/posts/delete" method="post">
-            <button type="submit" class='btn btn-large btn-danger' name="id" value="<%= item._id %>">Delete</button>                
+            <button type="submit" class='btn btn-large btn-danger deletebutton' name="id" value="<%= item._id %>">Delete</button>                
         </form>
 
         </p>
@@ -27,7 +27,7 @@
 
     <%})%>
     <%}else{%>
-        <h2 style="font-weight: 400;">You have not write any Blog , <a href="/users/compose" style="text-decoration: none;">Write here</a></h2>
+        <h2 class="home-title emptydashboard" style="font-weight: 400;">You have not write any Blog , <a href="/users/compose" style="text-decoration: none;">Write here</a></h2>
 
         <%}%>
 <%-include("./partial/footer")-%>

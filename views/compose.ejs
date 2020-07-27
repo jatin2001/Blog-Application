@@ -1,17 +1,17 @@
 
         <%-include("./partial/header") -%>
     
-        <h1>Compose</h1>
+        <h1 class="compose-heading">Compose</h1>
         <form action="/users/compose" method="post">
             <%-include('./partial/message')%>
             <br>
-            <h4>Title</h4>
-            <input type="text" class="form-control" name='title' autocomplete="off" value=<%= typeof title != 'undefined' ? title : '' %> >
+            <h4 class="compose-label">Title</h4>
+            <input type="text" class="form-control title-input" name='title' autocomplete="off" value=<%= typeof title != 'undefined' ? title : '' %> >
             <br>
-            <h4>Post</h4>
-            <textarea class="form-control" rows="5" name='content' autocomplete="off" value=<%= typeof content != 'undefined' ? content : '' %> ></textarea>
+            <h4 class="compose-label">Post</h4>
+            <textarea class="form-control content-input" rows="8" name='content' autocomplete="off" value=<%= typeof content != 'undefined' ? content : '' %> ></textarea>
             <br>
-            <button type="submit" class='btn btn-large btn-primary'>Publish</button>
+            <button type="submit" class='btn btn-large btn-primary deletebutton'>Publish</button>
         </form>
    
 <%-include('./partial/footer') -%>

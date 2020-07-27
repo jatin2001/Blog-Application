@@ -223,3 +223,25 @@
     opacity: 1;
     visibility: visible;
   }
+  .iconsocial{
+    height:100px;width: 100px;border-radius: 20px;
+  }
+  .iconlogo{
+    font-size: 50px;margin-top:15px;
+  }
+
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) 
+  { .adjustmob{
+    margin-left:10%;
+    margin-right:10%;
+    }
+    .iconsocial{
+      height:150px;width: 150px;border-radius: 20px;
+      margin-top:25px;
+      margin-left: 25px;
+      margin-right: 25px;
+    }
+    .iconlogo{
+      font-size:75px;margin: 28px;
+    }
+  }

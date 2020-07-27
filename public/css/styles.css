@@ -1,5 +1,5 @@
 .body{
-  min-width: 1000px;
+  min-width: 1100px;
 }
 .container-fluid {
     padding-top: 70px;
@@ -18,10 +18,10 @@
     color:black !important;
 }
 
-.footer-padding {
-	padding-bottom: 60px;
-}
 
+.footer-padding{
+  padding-top: 60px;
+}
 .footer {
 	position: fixed;
 	text-align: center;
@@ -83,8 +83,38 @@
   .dashboardresp{
     display: none;
   }
-  @media (min-device-width: 481px) and (max-device-width: 767px) {
-  
+  .body-width{
+    width: 80%;
+    margin-left:10%;
+  }
+  .Dailyadd{
+    font-size: 55px;
+    font-weight: 100;
+    margin-top: 100px;
+  }
+  .aboutHeading{
+    font-size: 25px;
+    font-weight: 300;
+    margin-top:50px;
+  }
+  .aboutHeadingmob{
+    display: none;
+  }
+  .book-logo{
+    font-size: 100px;
+    color:#1abc9c
+  }
+  .aboutContent{
+    font-size: 25px;
+    font-weight: lighter;
+}
+    /* ----------------------------------------------------------------------------------------------------------------------------------- */
+
+  @media (min-device-width: 481px) and (max-device-width: 812px) {
+     .body-width{
+       width: 90%;
+       margin-left:5%;
+     }
     .header-width{
       width:100vw;
       display: flex;
@@ -102,21 +132,22 @@
       margin-left: 20px;
     }
     .userhr{
-      margin-left:20px;
+      margin-left:10px;
+      border: 3px solid white;
     }
     .responsive-login{
       display: block;
       margin-left: auto;
       margin-right: auto;
-      margin-top:100px;
+      margin-top:50px;
     }
     /* Style The Dropdown Button */
     .dropbtnheader {
       display: block;
-      background-color: #4CAF50;
-      color: white;
-      padding: 16px;    
-      font-size: 16px;
+      color: white;  
+      font-size: 50px;
+      margin-left:25px;
+      padding-top: 15px;
       border: none;
       cursor: pointer;
     }
@@ -166,6 +197,7 @@
     }
     .userName{
       font-size: 20px;
+      color:white
     }
     /* Change color of dropdown links on hover */
     .dropdown-contentheader a:hover {color:black;}
@@ -183,21 +215,78 @@
     .loginhead{
       display: none;
     }
+    .home-title{
+      font-size: 3em;
+      width: 100%;
+    }
+    .post-title{
+      font-size: 2.2em;
+      word-wrap: break-word;
+      width: 100%;
+    }
+    .post-content{
+      font-size: 1.5em;
+      word-wrap: break-word;
+      line-height: 1.5em;
+      font-weight: 200;
+    }
+    .Dailyadd{
+      text-shadow:3px 3px #1abc9c;
+    }
+    .aboutHeading{
+      text-shadow:2px 2px #1abc9c;
+    }
+    .aboutContent{
+      text-shadow:2px 2px #1abc9c;
+    }
+    .compose-heading{
+      margin-top:50px;
+      text-align: center;
+      font-size: 3em;
+    }
+    .compose-label{
+      font-size: 2em;
+    }
+    .title-input{
+      height: 50px;
+      font-size: 1.5em;
+    }
+    .content-input
+    { 
+      font-size: 1.5em;
+    }
+    .page-title{
+      margin-top:30px;
+      text-align: center;
+      font-size: 3em;
+    }
+    .page-content{
+      margin-top:30px;
+      font-size: 1.7em;
+      line-height: 1.3em;
+    }
+    .writer-info{
+      font-size: 1.7em;
+      line-height: 1em;
+    }
     .footer{
-      margin-top:10%;
-      margin-bottom: -10%;
-      position: relative;
-      height: 70px;
-      padding-top: 10px;
+      bottom:0;
+      height: 40px;
+      
     }
     .footer p{
-      font-size: 10px;
+      margin-top: 10px;
+      font-size: 15px;
     }
     
   }
- @media only screen and (min-device-width : 320px) and (max-device-width : 480px) 
+  /* ----------------------------------------------------------------------------------------------------------------------------------- */
+ @media only screen and (min-device-width : 280px) and (max-device-width : 480px) 
 {
-  
+  .body-width{
+    width: 90%;
+    margin-left:5%;
+  }
   .header-width{
     width:100vw;
     display: flex;
@@ -218,10 +307,10 @@
   /* Style The Dropdown Button */
   .dropbtnheader {
     display: block;
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;    
-    font-size: 16px;
+    color: white;  
+    font-size: 70px;
+    margin-left:25px;
+    padding-top:25px;
     border: none;
     cursor: pointer;
   }
@@ -269,7 +358,12 @@
   .dropdown-contentelement a{
     font-size: 40px;
   }
-  
+  .userName{
+    font-size: 40px;
+  }
+  .userhr{
+    border: 5px solid white;
+  }
   .ulimg{
     height: 200px;
     width:200px;
@@ -290,6 +384,94 @@
   }
   .loginhead{
     display: none;
+  }
+  .home-title{
+    margin-top:2.5vh;
+    font-size: 6em;
+
+  }
+  .post-title{
+    font-size: 3.5em;
+    word-wrap: break-word;
+  }
+  .post-content{
+    font-size: 2.5em;
+    line-height: 1.5em;
+    word-wrap: break-word;
+    font-weight: 200;
+  }
+  .emptydashboard{
+    font-size: 4em;
+  }
+  .deletebutton{
+    width: 150px;
+    font-size: 1.5em;
+    height: 50px;
+  }
+  .Dailyadd{
+    font-size: 5em;
+    text-shadow:3px 3px #1abc9c;
+    font-weight: 100;
+    margin-top: 200px;
+  }
+  .book-logo{
+    margin-top:40px;
+    margin-bottom: 20px;
+    font-size: 180px;
+    color:#1abc9c
+  }
+  .aboutHeading{
+    display: none;
+  }
+  .aboutHeadingmob
+  { display: block;
+    font-size: 3.2em;
+    font-weight:50;
+    text-shadow:2px 2px #1abc9c;
+    margin-top:200px;
+  }
+  .aboutContent{
+      font-size: 2em;
+      text-shadow:1.5px 1.5px #1abc9c;
+      font-weight: lighter; 
+  }
+  .compose-heading{
+    margin-top:150px;
+    text-align: center;
+    font-size: 5em;
+  }
+  .compose-label{
+    font-size: 4em;
+  }
+  .title-input{
+    height: 100px;
+    font-size: 40px;
+  }
+  .content-input
+  { 
+    font-size: 50px;
+  }
+  .page-title{
+    margin-top:50px;
+    text-align: center;
+    font-size: 4em;
+  }
+  .page-content{
+    margin-top:50px;
+    font-size: 2.2em;
+    line-height: 1.7em;
+  }
+  .writer-info{
+    font-size: 2.2em;
+    line-height: 1.3em;
+  }
+  .errormsg
+  {
+    font-size: 20px;
+    font-weight: 100;
+  }
+  .footer-padding{
+    padding-top: 100px;
   }
   .footer{
     height: 120px;

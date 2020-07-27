@@ -1,11 +1,11 @@
 <%-include('./partial/header')%>
-    <link href="/css/signin.css" rel="stylesheet">
     <link href="/css/socialbtn.css" rel="stylesheet">
+    <link href="/css/signin.css" rel="stylesheet">
     <div class="loginblock">
       <form action="/users/login" method="post" class="form-signin text-center">
-       <img class="mb-1" src="/images/admin.jpg" alt="" width="150" height="150" style="border-radius: 50%;"/>
+       <img class="mb-1 userprofilepic" src="/images/admin.jpg" />
 
-      <h1 class="h3 mb-3 font-weight-normal "> LOGIN</h1>
+      <h1 class="h3 mb-3 font-weight-normal login-text "> LOGIN</h1>
       <%-include('./partial/message')%>
 
       <label for="inputEmail" class="sr-only">Email address</label>
@@ -26,19 +26,19 @@
               name='password' 
               value=<%= typeof password != 'undefined' ? password : '' %>
               >
-      <button class="btn btn-lg btn-primary btn-block" type="submit" style="background-color: #1abc9c">Log In</button>
+      <button class="btn btn-lg btn-primary btn-block btnlogin" type="submit" style="background-color: #1abc9c">Log In</button>
 
           <br>
-          <p>Don't have an account? <a href="/users/register">Sign up</a></p>
+          <p class="signupdetail">Don't have an account? <a href="/users/register">Sign up</a></p>
     </form>
     <div class="text-center">
-        <div style="display: flex;justify-content:center;margin-top:-20px;">
-                <a href="/auth/facebook" class="fb btns mr-4">
-                <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+        <div class="socialLogin">
+                <a href="/auth/facebook" class="fb btns facebookLogin">
+                <i class="fa fa-facebook fa-fw"></i> <span class="socialLoginfont">Login with Facebook</span>
                 </a>
         
-                <a href="/auth/google" class="google btns ml-4">
-                <i class="fa fa-google fa-fw"></i> Login with Google+
+                <a href="/auth/google" class="google btns googleLogin">
+                <i class="fa fa-google fa-fw"></i><span class="socialLoginfont">Login with Google+</span>
                 </a>
         </div>
     </div>
