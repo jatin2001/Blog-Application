@@ -107,6 +107,13 @@
     font-size: 25px;
     font-weight: lighter;
 }
+.page-title{
+  
+  word-wrap: break-word;
+}
+.page-content{
+  word-wrap: break-word;
+}
 /* ------------------------------------------------------------------------------------------------------------------------------------------------- */
 @media only screen and (max-width: 1030px) {
   .body-width{
@@ -171,6 +178,7 @@
    position:fixed;
    z-index: 1;
    overflow-y: auto;
+   padding-bottom: 150px;
  }
  .show{
    display: block;
@@ -248,12 +256,14 @@
  .page-title{
    margin-top:30px;
    text-align: center;
+   word-wrap: break-word;
    font-size: 3em;
  }
  .page-content{
    margin-top:30px;
    font-size: 1.7em;
    line-height: 1.3em;
+   word-wrap: break-word;
  }
  .writer-info{
    font-size: 1.7em;
@@ -332,11 +342,12 @@
     .dropdownheader {
       position: relative;
       display: inline-block;
+      padding-bottom: 100px;
     }
     
     /* Dropdown Content (Hidden by Default) */
     .dropdown-contentheader {
-      height: 100vh;
+      min-height: 100vh;
       display: none;
       padding-left: 5vw;
       padding-right: 10vw;
@@ -345,6 +356,7 @@
       box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
       left:0;
       top:0;
+      padding-bottom: 150px;
       position:fixed;
       z-index: 1;
       overflow-y: auto;
@@ -433,11 +445,13 @@
     }
     .page-title{
       margin-top:30px;
+      word-wrap: break-word;
       text-align: center;
       font-size: 3em;
     }
     .page-content{
       margin-top:30px;
+      word-wrap: break-word;
       font-size: 1.7em;
       line-height: 1.3em;
     }
@@ -640,10 +654,12 @@
   .page-title{
     margin-top:50px;
     text-align: center;
+    word-wrap: break-word;
     font-size: 4em;
   }
   .page-content{
     margin-top:50px;
+    word-wrap: break-word;
     font-size: 2.2em;
     line-height: 1.7em;
   }
