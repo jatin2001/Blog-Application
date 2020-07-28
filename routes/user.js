@@ -35,7 +35,7 @@ router.route('/compose')
     }
     if(msg!=='')
         {
-            res.render('compose',{msg,title,content});
+            res.render('compose',{msg,title,content,isLogin:true,name:req.user.name});
         } 
     else{
             const newPost = new Post({
