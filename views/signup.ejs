@@ -1,57 +1,64 @@
 <%-include("./partial/header") -%>
-  <link rel="stylesheet" href="/css/signup.css">
   <link href="/css/socialbtn.css" rel="stylesheet">
-  <div style="display: flex;">
-    <form action="/users/register" method="post" ">
-        <h2>Sign Up</h2>
-        <%-include('./partial/message')%>
-              <p>
-                    <label for="firstName" class="floatLabel" aria-autocomplete="off"> Name</label>
-                     <input 
-                        id="firstName"
-                        name="name" 
-                        type="text"
-                        value=<%= typeof name != 'undefined' ? name : '' %> 
-                      >
-              </p>
-              
-              <p>
-                  <label for="Email" class="floatLabel">Email</label>
-                  <input 
-                        id="Email" 
-                        name="email" 
-                        type="text"  
-                        value=<%= typeof email != 'undefined' ? email : '' %>
-                        >
-              </p>
-              <p>
-                  <label for="password" class="floatLabel">Password</label>
-                  <input id="password" 
-                         name="password" 
-                         type="password" 
-                         value=<%= typeof password != 'undefined' ? password : '' %> 
-                         >
-              </p>
-              <p>
-                <label for="password" class="floatLabel">Confirm Password</label>
-                <input id="password2" 
-                name="password2" 
-                type="password" 
-                value=<%= typeof password2 != 'undefined' ? password2 : '' %> 
-                >    
-              </p>
-              <p>
-                  <input type="submit" id="submit">
-              </p>  
-              <p class="login mt-3" style="margin-bottom: -15px;">Have An Account? <a href="/users/login">Login</a></p>    
-        </form>
+  <link rel="stylesheet" href="/css/signup.css">
+
+  <div class ="signup-form">
+          <div class="signup">
+            <form action="/users/register" method="post" ">
+              <h2 class="signupHeading">Sign Up</h2>
+              <%-include('./partial/message')%>
+                    <p>
+                          <label for="firstName" class="floatLabel" aria-autocomplete="off"> Name</label>
+                           <input 
+                              id="firstName"
+                              class="input-size"
+                              name="name" 
+                              type="text"
+                              value=<%= typeof name != 'undefined' ? name : '' %> 
+                            >
+                    </p>
+                    
+                    <p>
+                        <label for="Email" class="floatLabel">Email</label>
+                        <input 
+                              id="Email" 
+                              class="input-size"
+                              name="email" 
+                              type="email"  
+                              value=<%= typeof email != 'undefined' ? email : '' %>
+                              >
+                    </p>
+                    <p>
+                        <label for="password" class="floatLabel">Password</label>
+                        <input id="password" 
+                               name="password" 
+                               class="input-size"
+                               type="password" 
+                               value=<%= typeof password != 'undefined' ? password : '' %> 
+                               >
+                    </p>
+                    <p>
+                      <label for="password" class="floatLabel">Confirm Password</label>
+                      <input id="password2" 
+                      name="password2" 
+                      type="password"
+                      class="input-size"
+                      value=<%= typeof password2 != 'undefined' ? password2 : '' %> 
+                      >    
+                    </p>
+                    <p>
+                        <input type="submit" id="submit">
+                    </p>  
+                    <p class="login mt-3" style="margin-bottom: -15px;">Have An Account? <a href="/users/login">Login</a></p>    
+              </form>      
+          </div>
 
           <div class="socialbuttons">
-                  <a href="/auth/facebook" class="fb btns">
+                  <a href="/auth/facebook" class="fb btns facebookLogin">
                   <i class="fa fa-facebook fa-fw"></i> Sign up with Facebook
                   </a>
                   <hr>
-                  <a href="/auth/google" class="google btns" style="padding-right: 33px;">
+                  <a href="/auth/google" class="google btns googleLogin" style="padding-right: 33px;">
                   <i class="fa fa-google fa-fw"></i> Sign up with Google+  
                   </a>
           </div>

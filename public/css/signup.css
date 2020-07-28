@@ -4,7 +4,7 @@ body {
     font-size: 10px;
   }
   
-  form {
+  .signup {
     background: #fff;
     padding: 1em 4em 1em;
     width: 500px;
@@ -41,7 +41,7 @@ body {
     margin: 0;
   }
   form input[type="text"],
-  form input[type="password"] {
+  form input[type="password"],form input[type="email"] {
     background: #fff;
     border: 1px solid #dbdbdb;
     font-size: 1.6em;
@@ -49,7 +49,7 @@ body {
     border-radius: 2px;
   }
   form input[type="text"]:focus,
-  form input[type="password"]:focus {
+  form input[type="password"]:focus, form input[type="email"]:focus{
     background: #fff;
   }
   form span {
@@ -101,4 +101,296 @@ body {
     font-size: 15px;
     padding-bottom: 25px;
   }
-  
+  .signup-form{
+      display: flex;
+  }
+  @media only screen and (max-width: 1030px) {
+    .signup-form{
+      display: flex;
+      flex-direction: column;
+    }
+    .signup {
+      background: #fff;
+      padding: 1em 4em 1em;
+      width: 80%;
+      margin: 25px auto 25px;
+      box-shadow: 0 0 1em #1abc9c;
+      border-radius: 10px;
+    }
+    .socialbuttons{
+      background: #fff;
+      padding: 4em 4em 4em;
+      width:80%;
+      height: 40%;
+      margin: 10px auto 200px;
+      box-shadow: 0 0 1em #1abc9c;
+      border-radius: 10px;
+    }
+    .signupHeading{
+      font-size: 4em;
+    }
+    form p {
+      margin-top:45px;
+      position: relative;
+    }
+
+    form input {
+      height: 50px;
+      margin-left:2.5%;
+      display: block;
+      box-sizing: border-box;
+      width: 95%;
+    }
+
+    
+    form label.floatLabel {
+      margin-top:18px;
+      margin-left:0px;
+      font-size: 1.7em;
+    }
+    
+    form input[type="text"],
+    form input[type="password"],
+    form input[type="email"] {
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    font-size: 1.8em;
+    padding: 0.8em 0.5em;
+    border-radius: 10px;
+    }
+    form input[type="submit"] {
+      height:50px;
+      background:  #1abc9c;
+      border-radius: 10px;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      display: block;
+      font-size: 2em;
+      line-height: 1.6em;
+      outline: none;
+      padding: 0 0;
+      text-shadow: 0 1px #68b25b;
+    }
+    .login{
+      font-size: 1.8em;
+      margin-left:2%;
+      padding-bottom: 25px;
+    }
+    .facebookLogin{
+      width:97%;
+      margin-left:1%;
+      height: 50px;
+      margin-top:25px;
+      font-size: 2em;
+      text-align: center;
+      margin-right:-50px;
+      border-radius: 10px;
+      padding-top: 15px;
+    }
+    .googleLogin{
+      width:97%;
+      margin-left: 1%;
+      height: 50px;
+      text-align: center;
+      margin-top:25px;
+      font-size: 2em;
+      margin-top:25px;
+      border-radius: 10px;
+      padding-top: 15px;
+    } 
+  }
+  @media only screen and (min-device-width : 280px) and (max-device-width : 480px) 
+  {
+    .signup-form{
+      display: flex;
+      flex-direction: column;
+    }
+    .signup {
+      background: #fff;
+      padding: 1em 4em 1em;
+      width: 95%;
+      margin: 50px auto 50px;
+      box-shadow: 0 0 1em #1abc9c;
+      border-radius: 10px;
+    }
+    .socialbuttons{
+      background: #fff;
+      padding: 4em 4em 4em;
+      width:95%;
+      height: 40%;
+      margin: 10px auto 200px;
+      box-shadow: 0 0 1em #1abc9c;
+      border-radius: 10px;
+    }
+    .signupHeading{
+      font-size: 8em;
+    }
+    form p {
+      margin-top:45px;
+      position: relative;
+    }
+
+    form input {
+      height: 150px;
+      margin-left:2.5%;
+      display: block;
+      box-sizing: border-box;
+      width: 95%;
+    }
+
+    
+    form label.floatLabel {
+      margin-top:5px;
+      margin-left:20px;
+      font-size: 4em;
+    }
+    
+    form input[type="text"],
+    form input[type="password"],
+    form input[type="email"] {
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    font-size: 4.5em;
+    padding: 0.8em 0.5em;
+    border-radius: 10px;
+    }
+    form input[type="submit"] {
+      height:125px;
+      background:  #1abc9c;
+      border-radius: 10px;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      display: block;
+      font-size: 5em;
+      line-height: 1.6em;
+      outline: none;
+      padding: 0 0;
+      text-shadow: 0 1px #68b25b;
+    }
+    .login{
+      font-size: 4em;
+      margin-left:2%;
+      padding-bottom: 25px;
+    }
+    .facebookLogin{
+      width:97%;
+      margin-left:1%;
+      height: 100px;
+      margin-top:25px;
+      font-size: 4em;
+      text-align: center;
+      margin-right:-50px;
+      border-radius: 20px;
+      padding-top: 25px;
+    }
+    .googleLogin{
+      width:97%;
+      margin-left: 1%;
+      height: 100px;
+      text-align: center;
+      margin-top:25px;
+      font-size: 4em;
+      margin-top:25px;
+      border-radius: 25px;
+      padding-top: 25px;
+    }
+  }
+  @media (min-device-width: 481px) and (max-device-width: 812px)
+  {
+    .signup-form{
+      display: flex;
+      flex-direction: column;
+    }
+    .signup {
+      background: #fff;
+      padding: 1em 4em 1em;
+      width: 80%;
+      margin: 25px auto 25px;
+      box-shadow: 0 0 1em #1abc9c;
+      border-radius: 10px;
+    }
+    .socialbuttons{
+      background: #fff;
+      padding: 4em 4em 4em;
+      width:80%;
+      height: 40%;
+      margin: 10px auto 200px;
+      box-shadow: 0 0 1em #1abc9c;
+      border-radius: 10px;
+    }
+    .signupHeading{
+      font-size: 4em;
+    }
+    form p {
+      margin-top:45px;
+      position: relative;
+    }
+
+    form input {
+      height: 75px;
+      margin-left:2.5%;
+      display: block;
+      box-sizing: border-box;
+      width: 95%;
+    }
+
+    
+    form label.floatLabel {
+      margin-top:12px;
+      margin-left:10px;
+      font-size: 2.2em;
+    }
+    
+    form input[type="text"],
+    form input[type="password"],
+    form input[type="email"] {
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    font-size: 2.5em;
+    padding: 0.8em 0.5em;
+    border-radius: 10px;
+    }
+    form input[type="submit"] {
+      height:75px;
+      background:  #1abc9c;
+      border-radius: 10px;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      display: block;
+      font-size: 3em;
+      line-height: 1.6em;
+      outline: none;
+      padding: 0 0;
+      text-shadow: 0 1px #68b25b;
+    }
+    .login{
+      font-size: 2.7em;
+      margin-left:2%;
+      padding-bottom: 25px;
+    }
+    .facebookLogin{
+      width:97%;
+      margin-left:1%;
+      height: 75px;
+      margin-top:25px;
+      font-size: 2.5em;
+      text-align: center;
+      margin-right:-50px;
+      border-radius: 15px;
+      padding-top: 25px;
+    }
+    .googleLogin{
+      width:97%;
+      margin-left: 1%;
+      height: 75px;
+      text-align: center;
+      margin-top:25px;
+      font-size: 2.5em;
+      margin-top:25px;
+      border-radius: 15px;
+      padding-top: 25px;
+    }
+  }
