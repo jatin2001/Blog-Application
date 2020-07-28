@@ -1,9 +1,4 @@
 
-  body{
-    min-width:700px;        /* Suppose you want minimum width of 1000px */
-    width: auto !important;  /* Firefox will set width as auto */
-    width:700px;            /* As IE6 ignores !important it will set width as 1000px; */
- }
 .container-fluid {
     padding-top: 70px;
     padding-bottom: 70px;
@@ -111,6 +106,173 @@
     font-size: 25px;
     font-weight: lighter;
 }
+/* ------------------------------------------------------------------------------------------------------------------------------------------------- */
+@media only screen and (max-width: 1030px) {
+  .body-width{
+    width: 90%;
+    margin-left:5%;
+  }
+ .header-width{
+   width:100vw;
+   display: flex;
+   justify-content: space-between;
+ }
+ .header-brand{
+   font-size: 30px;
+ }
+ .header-ul{
+   display:none;
+ }
+ .ulimg{
+   height: 100px;
+   width:100px;
+   margin-left: 20px;
+   margin-right: 100px !important;
+ }
+ .userhr{
+   margin-left:10px;
+   border: 3px solid white;
+ }
+ .responsive-login{
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top:50px;
+ }
+ /* Style The Dropdown Button */
+ .dropbtnheader {
+   display: block;
+   color: white;  
+   font-size: 50px;
+   margin-left:25px;
+   padding-top: 15px;
+   border: none;
+   cursor: pointer;
+ }
+ 
+ /* The container <div> - needed to position the dropdown content */
+ .dropdownheader {
+   position: relative;
+   display: inline-block;
+ }
+ 
+ /* Dropdown Content (Hidden by Default) */
+ .dropdown-contentheader {
+   height: 100vh;
+   display: none;
+   padding-left: 5vw;
+   padding-right: 10vw;
+   position: absolute;
+   background-color:#1abc9c;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   left:0;
+   top:0;
+   position:fixed;
+   z-index: 1;
+   overflow-y: auto;
+ }
+ .show{
+   display: block;
+ }
+ 
+ /* Links inside the dropdown */
+ .dropdown-contentelement {
+   color: white;
+   margin-top:30px;
+   width: 100%;
+   padding-left: 35%;
+   background-color:#1abc9c; 
+   border-radius: 25px;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+ }
+ .dropdown-contentelement:hover{
+   background-color:#1da58a; 
+ }
+ .dropdown-contentelement a{
+   font-size: 20px;
+ }
+ .userName{
+   font-size: 20px;
+   color:white
+ }
+ /* Change color of dropdown links on hover */
+ .dropdown-contentheader a:hover {color:black;}
+ 
+ /* Show the dropdown menu on hover */
+ 
+ 
+ /* Change the background color of the dropdown button when the dropdown content is shown */
+ .dropdownheader:hover .dropbtnheader {
+   background-color: #3e8e41;
+ }
+ .dashboardresp{
+   display:block;
+ }
+ .loginhead{
+   display: none;
+ }
+ .home-title{
+   font-size: 3em;
+   width: 100%;
+ }
+ .post-title{
+   font-size: 2.2em;
+   word-wrap: break-word;
+   width: 100%;
+ }
+ .post-content{
+   font-size: 1.5em;
+   word-wrap: break-word;
+   line-height: 1.5em;
+   font-weight: 200;
+ }
+ .compose-heading{
+   margin-top:50px;
+   text-align: center;
+   font-size: 3em;
+ }
+ .compose-label{
+   font-size: 2em;
+ }
+ .title-input{
+   height: 50px;
+   font-size: 1.5em;
+ }
+ .content-input
+ { 
+   font-size: 1.5em;
+ }
+ .page-title{
+   margin-top:30px;
+   text-align: center;
+   font-size: 3em;
+ }
+ .page-content{
+   margin-top:30px;
+   font-size: 1.7em;
+   line-height: 1.3em;
+ }
+ .writer-info{
+   font-size: 1.7em;
+   line-height: 1em;
+ }
+ .footer{
+   bottom:0;
+   height: 40px;
+   
+ }
+ .footer p{
+   margin-top: 10px;
+   font-size: 15px;
+ }
+ 
+}
+
+
+
+
     /* ----------------------------------------------------------------------------------------------------------------------------------- */
 
   @media (min-device-width: 481px) and (max-device-width: 812px) {
@@ -483,180 +645,4 @@
   .footer p{
     font-size: 30px;
   }
-  }
-/* ------------------------------------------------------------------------------------------------------------------------------------------------- */
-  @media only screen and (max-width: 1030px) {
-    .body-width{
-      width: 90%;
-      margin-left:5%;
-    }
-   .header-width{
-     width:100vw;
-     display: flex;
-     justify-content: space-between;
-   }
-   .header-brand{
-     font-size: 30px;
-   }
-   .header-ul{
-     display:none;
-   }
-   .ulimg{
-     height: 100px;
-     width:100px;
-     margin-left: 20px;
-     margin-right: 100px !important;
-   }
-   .userhr{
-     margin-left:10px;
-     border: 3px solid white;
-   }
-   .responsive-login{
-     display: block;
-     margin-left: auto;
-     margin-right: auto;
-     margin-top:50px;
-   }
-   /* Style The Dropdown Button */
-   .dropbtnheader {
-     display: block;
-     color: white;  
-     font-size: 50px;
-     margin-left:25px;
-     padding-top: 15px;
-     border: none;
-     cursor: pointer;
-   }
-   
-   /* The container <div> - needed to position the dropdown content */
-   .dropdownheader {
-     position: relative;
-     display: inline-block;
-   }
-   
-   /* Dropdown Content (Hidden by Default) */
-   .dropdown-contentheader {
-     height: 100vh;
-     display: none;
-     padding-left: 5vw;
-     padding-right: 10vw;
-     position: absolute;
-     background-color:#1abc9c;
-     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-     left:0;
-     top:0;
-     position:fixed;
-     z-index: 1;
-     overflow-y: auto;
-   }
-   .show{
-     display: block;
-   }
-   
-   /* Links inside the dropdown */
-   .dropdown-contentelement {
-     color: white;
-     margin-top:30px;
-     width: 100%;
-     padding-left: 35%;
-     background-color:#1abc9c; 
-     border-radius: 25px;
-     padding: 12px 16px;
-     text-decoration: none;
-     display: block;
-   }
-   .dropdown-contentelement:hover{
-     background-color:#1da58a; 
-   }
-   .dropdown-contentelement a{
-     font-size: 20px;
-   }
-   .userName{
-     font-size: 20px;
-     color:white
-   }
-   /* Change color of dropdown links on hover */
-   .dropdown-contentheader a:hover {color:black;}
-   
-   /* Show the dropdown menu on hover */
-   
-   
-   /* Change the background color of the dropdown button when the dropdown content is shown */
-   .dropdownheader:hover .dropbtnheader {
-     background-color: #3e8e41;
-   }
-   .dashboardresp{
-     display:block;
-   }
-   .loginhead{
-     display: none;
-   }
-   .home-title{
-     font-size: 3em;
-     width: 100%;
-   }
-   .post-title{
-     font-size: 2.2em;
-     word-wrap: break-word;
-     width: 100%;
-   }
-   .post-content{
-     font-size: 1.5em;
-     word-wrap: break-word;
-     line-height: 1.5em;
-     font-weight: 200;
-   }
-   .Dailyadd{
-     text-shadow:3px 3px #1abc9c;
-   }
-   .aboutHeading{
-     text-shadow:2px 2px #1abc9c;
-   }
-   .aboutContent{
-     text-shadow:2px 2px #1abc9c;
-   }
-   .compose-heading{
-     margin-top:50px;
-     text-align: center;
-     font-size: 3em;
-   }
-   .compose-label{
-     font-size: 2em;
-   }
-   .title-input{
-     height: 50px;
-     font-size: 1.5em;
-   }
-   .content-input
-   { 
-     font-size: 1.5em;
-   }
-   .page-title{
-     margin-top:30px;
-     text-align: center;
-     font-size: 3em;
-   }
-   .page-content{
-     margin-top:30px;
-     font-size: 1.7em;
-     line-height: 1.3em;
-   }
-   .writer-info{
-     font-size: 1.7em;
-     line-height: 1em;
-   }
-   .footer{
-     bottom:0;
-     height: 40px;
-     
-   }
-   .footer p{
-     margin-top: 10px;
-     font-size: 15px;
-   }
-   
-  }
-
-
-  
- 
+}
