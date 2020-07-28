@@ -29,7 +29,9 @@
           <div class="responsive-login">
             <img src="/images/admin.jpg" alt="" class="ulimg" style="border-radius: 50%;">
             <% if((typeof isLogin !='undefined')&& isLogin !=false) {%>  
-                <li class="nav-item dropdown-contentelement userName">Hi,<%=name%>
+                <li class="nav-item dropdown-contentelement userName"> <%if(typeof name!='undefined') {%>
+                  Hi,<%=name%>
+                  <%}%>
                 </li>
             <%}else{%>
               <li class="nav-item dropdown-contentelement" id="Login" >

@@ -25,7 +25,7 @@ router.post('/:post',(req,res)=>{
                 User.findById(post.UserId,(err,user)=>{
                     if(err) console.log(err);
                     else{
-                        req.isAuthenticated()?res.render('post',{post,isLogin:true,name:user.name,email:user.email}):res.render('post',{post,name:user.name,email:user.email,isLogin:false});
+                        req.isAuthenticated()?res.render('post',{post,isLogin:true,writername:user.name,writeremail:user.email,name:req.user.name}):res.render('post',{post,writername:user.name,writeremail:user.email,isLogin:false});
                     }
                 })
             }
