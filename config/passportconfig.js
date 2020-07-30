@@ -23,7 +23,13 @@ module.exports = function(passport)
                             return done(null,false,{message:'Password incorrect'})
                         }
                         else{
-                            return done(null,user);
+                            if(!user.active)
+                            {
+                                return done(null,false,{message:'You need to verify email first'})
+                            }
+                            else{
+                                return done(null,user);
+                            }
                         }
                     })
                 }

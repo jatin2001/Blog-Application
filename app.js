@@ -57,6 +57,7 @@ app.use(function(req, res, next) {
 app.use('/',require('./routes/index'));
 app.use('/users',require('./routes/user'));
 app.use('/posts',require('./routes/postRoute'));
+app.use('/verify',require('./routes/verify'));
 
 const PORT = process.env.PORT||4000;
 app.listen(PORT,()=>{

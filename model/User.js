@@ -9,6 +9,8 @@ const userSchema = new mongoose.Schema({
     googleId:String,
     blog:[postSchema],
     facebookId:String,
+    secretToken:String,
+    active:Boolean,
 })
 userSchema.plugin(findOrCreate);
 const User = mongoose.model('User',userSchema);

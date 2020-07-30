@@ -4,6 +4,8 @@ const {Post} = require('../model/Post');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
+const randomString = require('randomstring');
+const mailer = require('../config/mailer');
 
 //compose
 router.route('/compose')
@@ -151,8 +153,10 @@ router.route('/register')
                     }
                     else{
                         const hashPassword = bcrypt.hashSync(password, 10);
+                        const secretToken = randomString.generate();
+                        const active = false;
                         const newUser = new User({
-                            name,email,password:hashPassword
+                            name,email,password:hashPassword,secretToken,active
                         })
                         newUser.save(err=>{
                             if(err)
@@ -160,13 +164,17 @@ router.route('/register')
                                 console.log(err);
                             }
                             else
-                            {    req.flash(
+                            {   
+                                const html = `<h1>Thanks for signup in Daily Journal</h1><br><h2>Click here to <a href="https://aqueous-gorge-92975.herokuapp.com/verify/${secretToken}">verify email</a></h2>`;
+                                mailer('jatinkumarjk2001@gmail.com',email,'Please Verify Your Email',html);
+                                 req.flash(
                                     'success_msg',
-                                    'You are now registered and can log in'
+                                    'Verification mail sent'
                                 );
                                 res.redirect('/users/login');
                             }
                         })
+                        
                     }
                 }
             })
