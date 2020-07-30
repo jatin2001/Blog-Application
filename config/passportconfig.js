@@ -91,7 +91,6 @@ passport.use(new FacebookStrategy({
   },
   function(accessToken, refreshToken, profile, done) {
     console.log('profile pic ' + profile.photos);
-    console.log('profile url ' + profileUrl);
     User.findOne({
         facebookId:profile.id
     }, function(err, user) {
