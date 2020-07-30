@@ -90,7 +90,7 @@ passport.use(new FacebookStrategy({
     profileFields: ['id', 'displayName', 'emails', 'photos','profileUrl'],
   },
   function(accessToken, refreshToken, profile, done) {
-    console.log('profile pic ' + profile.photos);
+    console.log('profile pic ' + profile.photos[0].value);
     User.findOne({
         facebookId:profile.id
     }, function(err, user) {
@@ -102,7 +102,7 @@ passport.use(new FacebookStrategy({
             user = new User({
                 facebookId:profile.id,
                 name:profile.displayName,
-                profilePic:profile.photos[0],
+                profilePic:profile.photos[0].value,
             });
             user.save(function(err) {
                 if (err) console.log(err);
