@@ -167,11 +167,6 @@ router.route('/register')
                             {   
                                 const html = `<h1>Thanks for signup in Daily Journal</h1><br><h2>Click here to <a href="https://aqueous-gorge-92975.herokuapp.com/verify/${secretToken}">verify email</a></h2>`;
                                 mailer('jatinkumarjk2001@gmail.com',email,'Please Verify Your Email',html);
-                                 req.flash(
-                                    'success_msg',
-                                    'Verification mail sent'
-                                );
-                                res.redirect('/users/login');
                             }
                         })
                         
