@@ -102,6 +102,7 @@ passport.use(new FacebookStrategy({
             user = new User({
                 facebookId:profile.id,
                 name:profile.displayName,
+                profilePic:profile.photos[0],
             });
             user.save(function(err) {
                 if (err) console.log(err);
