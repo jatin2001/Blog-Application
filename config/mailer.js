@@ -27,11 +27,6 @@ module.exports = function sendEmail(from,to,subject,html){
           console.log(error);
         } else {
           console.log('Email sent: ' + info.response);
-          req.flash(
-            'success_msg',
-            'Verification mail sent'
-            );
-            res.redirect('/users/login');
         }
       }); 
    
