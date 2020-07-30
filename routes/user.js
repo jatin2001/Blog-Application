@@ -12,7 +12,7 @@ router.route('/compose')
 .get((req,res)=>{
     if(req.isAuthenticated())
     {   
-        res.render('compose',{isLogin:true,name:req.user.name})
+        res.render('compose',{isLogin:true,user:req.user})
     }
     else{
         req.flash(
@@ -37,7 +37,7 @@ router.route('/compose')
     }
     if(msg!=='')
         {
-            res.render('compose',{msg,title,content,isLogin:true,name:req.user.name});
+            res.render('compose',{msg,title,content,isLogin:true,user:req.user});
         } 
     else{
             const newPost = new Post({
@@ -83,10 +83,10 @@ router.route('/dashboard')
             {
                 if(user.blog.length!==0)
                 {
-                    res.render('dashboard',{isLogin:true,posts:user.blog,name:req.user.name});
+                    res.render('dashboard',{isLogin:true,posts:user.blog,user:req.user});
                 }
                 else{
-                        res.render('dashboard',{isLogin:true,name:req.user.name})
+                        res.render('dashboard',{isLogin:true,user:req.user})
                 }
             }
         })

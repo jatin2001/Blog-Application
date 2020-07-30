@@ -27,10 +27,14 @@
         <div class="dropdownheader">
          <ul class="nav navbar-nav navbar-right header-ul dropdown-contentheader" id ="uLheader">
           <div class="responsive-login">
+            <%if(typeof user!= 'undefined' && typeof user.profilePic!='undefined'){%>
+              <img src=<%=user.profilePic%> alt="" class="ulimg" style="border-radius: 50%;">
+            <%}else{%>
             <img src="/images/admin.jpg" alt="" class="ulimg" style="border-radius: 50%;">
+            <%}%>
             <% if((typeof isLogin !='undefined')&& isLogin !=false) {%>  
-                <li class="nav-item dropdown-contentelement userName"> <%if(typeof name!='undefined') {%>
-                  Hi,<%=name%>
+                <li class="nav-item dropdown-contentelement userName"> <%if( typeof user!= 'undefined' && typeof user.name!='undefined') {%>
+                  Hi,<%=user.name%>
                   <%}%>
                 </li>
             <%}else{%>
@@ -66,10 +70,14 @@
           <%}%>
             <% if((typeof isLogin !='undefined')&& isLogin !=false) {%>
                 <li id="compose " class="dropdown">
+                  <%if(typeof user!= 'undefined' && typeof user.profilePic!='undefined'){%>
+                    <img class="mb-4 loginhead" src=<%=user.profilePic%> alt="" width="60" height="60" style="border-radius: 50% ; margin-left:13px;margin-right:-25px">
+                  <%}else{%>
                   <img class="mb-4 loginhead" src="/images/admin.jpg" alt="" width="60" height="60" style="border-radius: 50% ; margin-left:13px;margin-right:-25px">
-                    <div class="dropdown-content">
-                       <%if(typeof name!='undefined') {%>
-                        <p>Hi,<%=name%></p> <hr>
+                  <%}%> 
+                  <div class="dropdown-content">
+                       <%if(typeof user!= 'undefined' &&  typeof user.name!='undefined') {%>
+                        <p>Hi,<%=user.name%></p> <hr>
                         <%}%>
                       <a href="/users/dashboard" style="text-decoration: none;;">DASHBOARD</a>
                         <hr>

@@ -7,14 +7,14 @@ router.get('/',(req,res)=>{
   Post.find({},(err,posts)=>{     
             err?
             console.log(err)
-            :req.isAuthenticated()?res.render('home',{isLogin:true,posts,name:req.user.name,}):res.render('home',{posts,isLogin:false});
+            :req.isAuthenticated()?res.render('home',{isLogin:true,posts,user:req.user,}):res.render('home',{posts,isLogin:false});
   })
 })
 router.get('/about',(req,res)=>{
-  req.isAuthenticated()?res.render('about',{isLogin:true,name:req.user.name}):res.render('about',{isLogin:false});
+  req.isAuthenticated()?res.render('about',{isLogin:true,user:req.user}):res.render('about',{isLogin:false});
 })
 router.get('/contact',(req,res)=>{
-  req.isAuthenticated()?res.render('contact',{isLogin:true,name:req.user.name}):res.render('contact',{isLogin:false});
+  req.isAuthenticated()?res.render('contact',{isLogin:true,user:req.user}):res.render('contact',{isLogin:false});
 })
 // router.get('/dashboard', (req, res) =>{
 //   if(req.isAuthenticated())

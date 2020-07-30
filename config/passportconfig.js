@@ -55,6 +55,7 @@ module.exports = function(passport)
         userProfileURL: 'https://www.googleapis.com/oauth2/v3/userinfo'
       },
       function(accessToken, refreshToken, profile, done) {
+        
         User.findOne({
             email: profile.emails[0].value
         }, function(err, user) {
@@ -66,7 +67,8 @@ module.exports = function(passport)
                 user = new User({
                     name: profile.displayName,   
                     email:profile.emails[0].value, 
-                    googleId:profile.id,    
+                    googleId:profile.id,  
+                    profilePic:profile.photos[0].value,  
                 });
                 user.save(function(err) {
                     if (err) console.log(err);
